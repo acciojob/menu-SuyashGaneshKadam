@@ -80,7 +80,7 @@ const App = () => {
     const [category, setCategory] = useState("all");
 
     function modifyList(e) {
-        let cat = e.target.id;
+        let cat = e.target.name;
         if (category !== cat) {
             setCategory(cat);
             if (cat === "all") {
@@ -96,16 +96,17 @@ const App = () => {
                 setFilteredDishes(dishes.filter((dish) => dish.category === cat));
             }
         }
+        console.log(filteredDishes);
     }
 
     return (
         <div id="main">
             <h1>Our Menu</h1>
 
-            <button onClick={(e) => { modifyList(e) }} id="all filter-btn-1">All</button>
-            <button onClick={(e) => { modifyList(e) }} id="breakfast filter-btn-2">Breakfast</button>
-            <button onClick={(e) => { modifyList(e) }} id="lunch filter-btn-3">Lunch</button>
-            <button onClick={(e) => { modifyList(e) }} id="shakes filter-btn-4">Shakes</button>
+            <button onClick={(e) => { modifyList(e) }} name="all" id="filter-btn-1">All</button>
+            <button onClick={(e) => { modifyList(e) }} name="breakfast" id="filter-btn-2">Breakfast</button>
+            <button onClick={(e) => { modifyList(e) }} name="lunch" id="filter-btn-3">Lunch</button>
+            <button onClick={(e) => { modifyList(e) }} name="shakes" id="filter-btn-4">Shakes</button>
 
             {filteredDishes.map((dish) => (
                 <div id={dish.id}>
