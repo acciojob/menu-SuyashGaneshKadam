@@ -99,13 +99,13 @@ const App = () =>{
     }
 
     return(
-        <div>
+        <div id="main">
             <h1>Our Menu</h1>
             <div>
-                <button onClick={(e) => {modifyList(e)}} id="all">All</button>
-                <button onClick={(e) => {modifyList(e)}} id="breakfast">Breakfast</button>
-                <button onClick={(e) => {modifyList(e)}} id="lunch">Lunch</button>
-                <button onClick={(e) => {modifyList(e)}} id="shakes">Shakes</button>
+                <button onClick={(e) => {modifyList(e)}} id="all filter-btn-1">All</button>
+                <button onClick={(e) => {modifyList(e)}} id="breakfast filter-btn-2">Breakfast</button>
+                <button onClick={(e) => {modifyList(e)}} id="lunch filter-btn-3">Lunch</button>
+                <button onClick={(e) => {modifyList(e)}} id="shakes filter-btn-4">Shakes</button>
             </div>
             <div>
                 {filteredDishes.map((dish) =>(
