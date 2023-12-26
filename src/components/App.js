@@ -109,7 +109,7 @@ const App = () => {
             <button onClick={(e) => { modifyList(e) }} name="shakes" id="filter-btn-4">Shakes</button>
 
             {filteredDishes.map((dish) => (
-                <div key={dish.id} data-test-id={`menu-item-${dish.category}`}>
+                <div data-test-id={`menu-item-${dish.category}`}>
                     <img src={dish.img} alt="Dish Image" />
                     <h3>{dish.title}</h3>
                     <h5>{dish.price}</h5>
